@@ -4,7 +4,6 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:translator/translator.dart';
 
 class Temperatura extends StatefulWidget {
   @override
@@ -59,8 +58,7 @@ class _TemperaturaState extends State<Temperatura> {
                   setState(() {
                      hora = DateTime.now();
                      formato = new DateFormat("dd/MM - hh:mm").format(hora);
-                     TempR9();
-                     TempMax();
+                     getWeatherSorocaba();
                     
                   });
                 },
